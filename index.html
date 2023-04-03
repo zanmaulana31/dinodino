@@ -4,24 +4,71 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | 2d experiment</title>
+    <title>Dino-dino TheGame</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webgl.json", {onProgress: UnityProgress});
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4318909542516612"
     crossorigin="anonymous"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .topnav a.active {
+        background-color: #ec0808;
+        color: white;
+      }
+      </style>
   </head>
   <body>
-    <div class="webgl-content">
+    <div class="webgl-content" style="display: table; width: 100%; height: 100%;">
+      <div id="unityContainer"></div>
+   
+    <div class="topnav">
+      <a class="active" href="#home"><b>Artcodes</b></a>
+     
+    </div>
+    <div class="webgl-content" style="margin-top: 50px;">
+  
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
-        <div class="webgl-logo"></div>
+        <div class="title"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">2d experiment</div>
+        <div class="title">Dino dino TheGame</div>
       </div>
     </div>
+
+    <script>
+      var myWidth = document.innerWidth;
+      var myHeight = document.innerHeight;
+      document.getElementById("unityContainer").style.width = myWidth + "px";
+      document.getElementById("unityContainer").style.height = myHeight + "px";
+    </script>
+
+
   </body>
 </html>
